@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+footer .attribution {
+  padding: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: red;
+}
+
+body {
+  -webkit-transition: background-color 300ms, background-image 300ms;
+  transition: background-color 300ms, background-image 300ms;
+  font-family: Josefin Sans;
+  background-color: #e4e5f1;
+  margin: 0;
+  background-image: url(./images/bg-mobile-light.jpg);
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+}
+
+body .container {
+  padding: 0 20px;
+}
+
+body .container header .sun {
+  display: none;
+}
+
+body.dark {
+  background-color: #161722;
+  background-image: url(./images/bg-mobile-dark.jpg);
+}
+
+body.dark .container header .sun {
+  display: inline-block;
+}
+
+body.dark .container header .moon {
+  display: none;
+}
+
+input {
+  font-family: Josefin Sans;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  margin: 0;
+  color: #fafafa;
+  letter-spacing: 10px;
+}
+
+header img {
+  cursor: pointer;
+}
+
+header .moon {
+  -webkit-filter: brightness(20%);
+          filter: brightness(20%);
+}
+
+.list {
+  color: #484b6a;
+}
+
+.list .list-new {
+  background-color: #fafafa;
+  padding: 20px 30px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.list .list-new input {
+  border: none;
+  background-color: #fafafa;
+  outline: none;
+  margin-left: 10px;
+  width: 100%;
+}
+
+body.dark .list .list-new input {
+  background-color: #25273c;
+  color: #cacde8;
+}
+
+body.dark .list .list-new {
+  background-color: #25273c;
+}
+
+.list .list-jobs .list-item {
+  background-color: #fafafa;
+  padding: 20px 30px;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
+  border-radius: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 85% auto;
+      grid-template-columns: auto 85% auto;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.list .list-jobs .list-item img, .list .list-jobs .list-item div {
+  cursor: pointer;
+}
+
+.list .list-jobs .list-item.inactive .list-circle {
+  background-image: url(./images/icon-check.svg), -webkit-gradient(linear, right top, left top, from(#57ddff), to(#c058f3));
+  background-image: url(./images/icon-check.svg), linear-gradient(to left, #57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-size: 70%, 100%;
+  background-position: center;
+}
+
+.list .list-jobs .list-item.inactive span {
+  text-decoration: line-through;
+  color: #d2d3db;
+}
+
+body.dark .list .list-jobs .list-item {
+  background-color: #25273c;
+  color: #cacde8;
+}
+
+body.dark .list .list-jobs .list-item.inactive span {
+  color: #777a92;
+}
+
+.list .list-jobs > :first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.list .list-filter-top {
+  background-color: #fafafa;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: #9394a5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0 0 5px 5px;
+}
+
+.list .list-filter-top .list-clear {
+  cursor: pointer;
+}
+
+body.dark .list .list-filter-top {
+  background-color: #25273c;
+}
+
+.list .list-options {
+  background-color: #fafafa;
+  padding: 20px 30px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  list-style: none;
+  color: #9394a5;
+}
+
+.list .list-options li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.list .list-options li.active {
+  color: blue;
+}
+
+.list .list-options li.list-filter-bt {
+  display: none;
+}
+
+.list .list-options li:hover:not(.active):not(:first-child) {
+  color: #484b6a;
+}
+
+body.dark .list .list-options {
+  background-color: #25273c;
+}
+
+body.dark .list .list-options li:hover:not(.active):not(:first-child) {
+  color: #cacde8;
+}
+
+.list .list-circle {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#fafafa)) padding-box, -webkit-gradient(linear, left top, right top, from(#d2d3db), to(#d2d3db)) border-box;
+  background: linear-gradient(#fafafa, #fafafa) padding-box, linear-gradient(to right, #d2d3db, #d2d3db) border-box;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.list .list-circle:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#fafafa)) padding-box, -webkit-gradient(linear, right top, left top, from(#57ddff), to(#c058f3)) border-box;
+  background: linear-gradient(#fafafa, #fafafa) padding-box, linear-gradient(to left, #57ddff, #c058f3) border-box;
+}
+
+footer p {
+  text-align: center;
+  color: #9394a5;
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url(./images/bg-desktop-light.jpg);
+  }
+  body .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  body .container header .sun {
+    display: none;
+  }
+  body.dark {
+    background-image: url(./images/bg-desktop-dark.jpg);
+  }
+  .list .list-filter-top {
+    display: none;
+  }
+  .list .list-options li.list-filter-bt {
+    display: inline-block;
+  }
+  .list .list-options li:first-child {
+    cursor: initial;
+  }
+  .list .list-jobs > :last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  .list .list-jobs .list-cross {
+    visibility: hidden;
+  }
+  .list .list-jobs :hover .list-cross {
+    visibility: visible;
+  }
+  body.dark footer .attribution a {
+    color: blue;
+  }
+}
+/*# sourceMappingURL=style.css.map */
